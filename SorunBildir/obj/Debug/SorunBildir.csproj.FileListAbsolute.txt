@@ -1,0 +1,10 @@
+C:\Users\Ali\Desktop\projelerim\SorunBildir\SorunBildir\bin\Debug\SorunBildir.exe.config
+C:\Users\Ali\Desktop\projelerim\SorunBildir\SorunBildir\bin\Debug\SorunBildir.exe
+C:\Users\Ali\Desktop\projelerim\SorunBildir\SorunBildir\bin\Debug\SorunBildir.pdb
+C:\Users\Ali\Desktop\projelerim\SorunBildir\SorunBildir\obj\Debug\SorunBildir.csprojAssemblyReference.cache
+C:\Users\Ali\Desktop\projelerim\SorunBildir\SorunBildir\obj\Debug\SorunBildir.Form1.resources
+C:\Users\Ali\Desktop\projelerim\SorunBildir\SorunBildir\obj\Debug\SorunBildir.Properties.Resources.resources
+C:\Users\Ali\Desktop\projelerim\SorunBildir\SorunBildir\obj\Debug\SorunBildir.csproj.GenerateResource.cache
+C:\Users\Ali\Desktop\projelerim\SorunBildir\SorunBildir\obj\Debug\SorunBildir.csproj.CoreCompileInputs.cache
+C:\Users\Ali\Desktop\projelerim\SorunBildir\SorunBildir\obj\Debug\SorunBildir.exe
+C:\Users\Ali\Desktop\projelerim\SorunBildir\SorunBildir\obj\Debug\SorunBildir.pdb
