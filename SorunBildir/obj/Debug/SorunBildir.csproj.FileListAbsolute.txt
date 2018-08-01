@@ -8,3 +8,6 @@ C:\Users\Ali\Desktop\projelerim\SorunBildir\SorunBildir\obj\Debug\SorunBildir.cs
 C:\Users\Ali\Desktop\projelerim\SorunBildir\SorunBildir\obj\Debug\SorunBildir.csproj.CoreCompileInputs.cache
 C:\Users\Ali\Desktop\projelerim\SorunBildir\SorunBildir\obj\Debug\SorunBildir.exe
 C:\Users\Ali\Desktop\projelerim\SorunBildir\SorunBildir\obj\Debug\SorunBildir.pdb
+C:\Users\Ali\Desktop\projelerim\SorunBildir\SorunBildir\obj\Debug\SorunBildir.DetayliSorunGoster.resources
+C:\Users\Ali\Desktop\projelerim\SorunBildir\SorunBildir\obj\Debug\SorunBildir.GirisEkranı.resources
+C:\Users\Ali\Desktop\projelerim\SorunBildir\SorunBildir\obj\Debug\SorunBildir.SorunGoster.resources

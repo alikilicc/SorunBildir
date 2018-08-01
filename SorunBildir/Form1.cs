@@ -4,11 +4,15 @@ using System.Net;
 using System.Net.NetworkInformation;
 using System.Windows.Forms;
 using System.Management;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace SorunBildir
 {
     public partial class Form1 : Form
     {
+        const string constr = "Server=DESKTOP-8FUAC6A\\SQLEXPRESS;Database=SorunBildirDB;Trusted_Connection=True;";
+              
         IPGlobalProperties computerProperties = IPGlobalProperties.GetIPGlobalProperties();
         public Form1()
         {
@@ -17,8 +21,10 @@ namespace SorunBildir
 
         private void ButonBilgiEkle_Click(object sender, EventArgs e)
         {
+
             IPHostEntry host;
             String yerelIp = "?";
+            SelectQuery query = new SelectQuery("Win32_ComputerSystem");
             host = Dns.GetHostEntry(Dns.GetHostName());
             NetworkInterface[] arayuz=NetworkInterface.GetAllNetworkInterfaces();
             textbKullAdi.Text = Environment.UserName;   //Kullanıcı Adı  
@@ -29,7 +35,9 @@ namespace SorunBildir
             String mac2 = mac.ToString();     
             textbMac.Text = GetMacAdres();
             textbGateway.Text = GetDefaultGateway().ToString();
-      
+            textbEtkiAlani.Text = System.Environment.UserDomainName;
+            // textbErisimTuru.Text = System.Net.NetworkInformation.IPGlobalProperties.GetIPGlobalProperties().DomainName;
+
 
             //Bunu yapmamızın sebebi burdan gelecek mac ornegin 1123431f23 şeklinde olacak MacAl fonksiyonu bunu 11:23:43:1f:23şeklinde bize gonderecek.
 
@@ -43,10 +51,9 @@ namespace SorunBildir
                     textbIP.Text = yerelIp;
                 }
             }
-            foreach (NetworkInterface tip in arayuz)
-            {
-                textbErisimTuru.Text = tip.Name;
-            }
+
+             
+            
         }
         public IPAddress GetDefaultGateway()
         {
@@ -92,6 +99,43 @@ namespace SorunBildir
             return string.Empty;
         }
 
+        private void butonGonder_Click(object sender, EventArgs e)
+        {
+            if (textbSoruNe.Text != string.Empty)
+            {
+                try
+                {
+                    using (SqlConnection con = new SqlConnection(constr))
+                    {
+                        con.Open();
+                        if (con.State == ConnectionState.Open)
+                        {
+                            SqlCommand com = new SqlCommand("insert into Sorun_Bilgileri (kullanici_adi, bilgisayar_adi, ip_adres," +
+                                " mac_adres, gateway_adres, domain, sorun) " +
+                                "values('" + textbKullAdi.Text + "', '" + textbBilAdi.Text + "', " +
+                                "'" + textbIP.Text + "', '" + textbMac.Text + "', " +
+                                "'" + textbGateway.Text + "', '" + textbEtkiAlani.Text + "', " +
+                                "'" + textbSoruNe.Text + "')", con);
+                            int retVal = com.ExecuteNonQuery();
+                            if (retVal > 0)
+                            {
+                                MessageBox.Show("SORUN İLETİLDİ...");
+
+                            }
+                        }
+                        else
+                            MessageBox.Show("BAĞLANTI SAĞLANMADI...");
+                    }
+                }
+                catch (Exception exc)
+                {
+                    MessageBox.Show("Error: " + exc.Message);
+                }
+            }
+            else
+                MessageBox.Show("Lütfen Sorunu Açıklayınız");
+        }
     }
-}
+    }
+
 

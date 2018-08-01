@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ButonBilgiEkle = new System.Windows.Forms.Button();
-            this.textbErisimTuru = new System.Windows.Forms.TextBox();
+            this.textbEtkiAlani = new System.Windows.Forms.TextBox();
             this.textbMac = new System.Windows.Forms.TextBox();
             this.textbIP = new System.Windows.Forms.TextBox();
             this.textbGateway = new System.Windows.Forms.TextBox();
@@ -45,8 +45,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textbSoruNe = new System.Windows.Forms.TextBox();
             this.butonGonder = new System.Windows.Forms.Button();
+            this.textbSoruNe = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -75,7 +75,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.ButonBilgiEkle);
-            this.groupBox2.Controls.Add(this.textbErisimTuru);
+            this.groupBox2.Controls.Add(this.textbEtkiAlani);
             this.groupBox2.Controls.Add(this.textbMac);
             this.groupBox2.Controls.Add(this.textbIP);
             this.groupBox2.Controls.Add(this.textbGateway);
@@ -106,12 +106,12 @@
             this.ButonBilgiEkle.UseVisualStyleBackColor = false;
             this.ButonBilgiEkle.Click += new System.EventHandler(this.ButonBilgiEkle_Click);
             // 
-            // textbErisimTuru
+            // textbEtkiAlani
             // 
-            this.textbErisimTuru.Location = new System.Drawing.Point(439, 119);
-            this.textbErisimTuru.Name = "textbErisimTuru";
-            this.textbErisimTuru.Size = new System.Drawing.Size(100, 20);
-            this.textbErisimTuru.TabIndex = 11;
+            this.textbEtkiAlani.Location = new System.Drawing.Point(439, 119);
+            this.textbEtkiAlani.Name = "textbEtkiAlani";
+            this.textbEtkiAlani.Size = new System.Drawing.Size(100, 20);
+            this.textbEtkiAlani.TabIndex = 11;
             // 
             // textbMac
             // 
@@ -213,14 +213,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Sorun Nedir";
             // 
-            // textbSoruNe
-            // 
-            this.textbSoruNe.Location = new System.Drawing.Point(27, 19);
-            this.textbSoruNe.Multiline = true;
-            this.textbSoruNe.Name = "textbSoruNe";
-            this.textbSoruNe.Size = new System.Drawing.Size(513, 80);
-            this.textbSoruNe.TabIndex = 0;
-            // 
             // butonGonder
             // 
             this.butonGonder.BackColor = System.Drawing.Color.LightCyan;
@@ -231,6 +223,15 @@
             this.butonGonder.TabIndex = 1;
             this.butonGonder.Text = "Gönder";
             this.butonGonder.UseVisualStyleBackColor = false;
+            this.butonGonder.Click += new System.EventHandler(this.butonGonder_Click);
+            // 
+            // textbSoruNe
+            // 
+            this.textbSoruNe.Location = new System.Drawing.Point(27, 19);
+            this.textbSoruNe.Multiline = true;
+            this.textbSoruNe.Name = "textbSoruNe";
+            this.textbSoruNe.Size = new System.Drawing.Size(513, 80);
+            this.textbSoruNe.TabIndex = 0;
             // 
             // Form1
             // 
@@ -260,7 +261,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button ButonBilgiEkle;
-        private System.Windows.Forms.TextBox textbErisimTuru;
+        private System.Windows.Forms.TextBox textbEtkiAlani;
         private System.Windows.Forms.TextBox textbMac;
         private System.Windows.Forms.TextBox textbIP;
         private System.Windows.Forms.TextBox textbGateway;
