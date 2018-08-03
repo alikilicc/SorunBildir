@@ -47,17 +47,21 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.butonGonder = new System.Windows.Forms.Button();
             this.textbSoruNe = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(53, 12);
+            this.groupBox1.Location = new System.Drawing.Point(53, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(662, 85);
+            this.groupBox1.Size = new System.Drawing.Size(662, 91);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sorun Bildirme Formu";
@@ -66,7 +70,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(127, 16);
+            this.label1.Location = new System.Drawing.Point(156, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(406, 32);
             this.label1.TabIndex = 0;
@@ -74,6 +78,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.LightSkyBlue;
             this.groupBox2.Controls.Add(this.ButonBilgiEkle);
             this.groupBox2.Controls.Add(this.textbEtkiAlani);
             this.groupBox2.Controls.Add(this.textbMac);
@@ -96,7 +101,7 @@
             // 
             // ButonBilgiEkle
             // 
-            this.ButonBilgiEkle.BackColor = System.Drawing.Color.LightCyan;
+            this.ButonBilgiEkle.BackColor = System.Drawing.Color.Turquoise;
             this.ButonBilgiEkle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ButonBilgiEkle.Location = new System.Drawing.Point(256, 169);
             this.ButonBilgiEkle.Name = "ButonBilgiEkle";
@@ -204,6 +209,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.LightSkyBlue;
             this.groupBox3.Controls.Add(this.butonGonder);
             this.groupBox3.Controls.Add(this.textbSoruNe);
             this.groupBox3.Location = new System.Drawing.Point(53, 332);
@@ -215,7 +221,7 @@
             // 
             // butonGonder
             // 
-            this.butonGonder.BackColor = System.Drawing.Color.LightCyan;
+            this.butonGonder.BackColor = System.Drawing.Color.Turquoise;
             this.butonGonder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.butonGonder.Location = new System.Drawing.Point(558, 19);
             this.butonGonder.Name = "butonGonder";
@@ -232,6 +238,16 @@
             this.textbSoruNe.Name = "textbSoruNe";
             this.textbSoruNe.Size = new System.Drawing.Size(513, 80);
             this.textbSoruNe.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::SorunBildir.Properties.Resources.askk;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(27, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 65);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
@@ -251,6 +267,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -276,6 +293,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button butonGonder;
         private System.Windows.Forms.TextBox textbSoruNe;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
