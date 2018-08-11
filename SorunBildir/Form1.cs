@@ -11,8 +11,9 @@ namespace SorunBildir
 {
     public partial class Form1 : Form
     {
+        String tut;
         const string constr = "Server=DESKTOP-8FUAC6A\\SQLEXPRESS;Database=SorunBildirDB;Trusted_Connection=True;";
-              
+
         IPGlobalProperties computerProperties = IPGlobalProperties.GetIPGlobalProperties();
         public Form1()
         {
@@ -26,13 +27,13 @@ namespace SorunBildir
             String yerelIp = "?";
             SelectQuery query = new SelectQuery("Win32_ComputerSystem");
             host = Dns.GetHostEntry(Dns.GetHostName());
-            NetworkInterface[] arayuz=NetworkInterface.GetAllNetworkInterfaces();
+            NetworkInterface[] arayuz = NetworkInterface.GetAllNetworkInterfaces();
             textbKullAdi.Text = Environment.UserName;   //Kullanıcı Adı  
             textbBilAdi.Text = Dns.GetHostName();      //Bilgisayar Adı
             //tip= NetworkInterface.GetIsNetworkAvailable;
             PhysicalAddress mac;
             mac = arayuz[0].GetPhysicalAddress();
-            String mac2 = mac.ToString();     
+            String mac2 = mac.ToString();
             textbMac.Text = GetMacAdres();
             textbGateway.Text = GetDefaultGateway().ToString();
             textbEtkiAlani.Text = System.Environment.UserDomainName;
@@ -52,8 +53,8 @@ namespace SorunBildir
                 }
             }
 
-             
-            
+
+
         }
         public IPAddress GetDefaultGateway()
         {
@@ -103,6 +104,8 @@ namespace SorunBildir
         {
             if (textbSoruNe.Text != string.Empty)
             {
+              
+                tut = GirisEkranı.otelAdi;
                 try
                 {
                     using (SqlConnection con = new SqlConnection(constr))
@@ -110,9 +113,9 @@ namespace SorunBildir
                         con.Open();
                         if (con.State == ConnectionState.Open)
                         {
-                            SqlCommand com = new SqlCommand("insert into Sorun_Bilgileri (kullanici_adi, bilgisayar_adi, ip_adres," +
-                                " mac_adres, gateway_adres, domain, sorun) " +
-                                "values('" + textbKullAdi.Text + "', '" + textbBilAdi.Text + "', " +
+                            SqlCommand com = new SqlCommand("insert into Sorun_Bilgileri (otel_adi,kullanici_adi, bilgisayar_adi, ip_adres," +
+                                " mac_adres, gateway_adres, etki_alani, sorun) " +
+                                "values('"+ tut +"','" + textbKullAdi.Text + "', '" + textbBilAdi.Text + "', " +
                                 "'" + textbIP.Text + "', '" + textbMac.Text + "', " +
                                 "'" + textbGateway.Text + "', '" + textbEtkiAlani.Text + "', " +
                                 "'" + textbSoruNe.Text + "')", con);
@@ -120,7 +123,6 @@ namespace SorunBildir
                             if (retVal > 0)
                             {
                                 MessageBox.Show("SORUN İLETİLDİ...");
-
                             }
                         }
                         else
@@ -135,7 +137,14 @@ namespace SorunBildir
             else
                 MessageBox.Show("Lütfen Sorunu Açıklayınız");
         }
-    }
-    }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SorunGoster ob = new SorunGoster();
+                ob.Show();
+            this.Hide();
+
+        }
+    }
+}
 

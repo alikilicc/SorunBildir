@@ -30,16 +30,16 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textbKullaniciAdi = new System.Windows.Forms.TextBox();
+            this.textbSifre = new System.Windows.Forms.TextBox();
+            this.butonGiris = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -64,43 +64,54 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Giriş Ekranı";
             // 
-            // textBox1
+            // pictureBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(155, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(128, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "Kullanıcı Adı";
-            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
+            this.pictureBox1.BackgroundImage = global::SorunBildir.Properties.Resources.user;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(68, 49);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
-            // textBox2
+            // textbKullaniciAdi
             // 
-            this.textBox2.Location = new System.Drawing.Point(155, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(128, 20);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "Şifre";
-            this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
+            this.textbKullaniciAdi.Location = new System.Drawing.Point(155, 31);
+            this.textbKullaniciAdi.Name = "textbKullaniciAdi";
+            this.textbKullaniciAdi.Size = new System.Drawing.Size(128, 20);
+            this.textbKullaniciAdi.TabIndex = 2;
+            this.textbKullaniciAdi.Text = "Kullanıcı Adı";
+            this.textbKullaniciAdi.Click += new System.EventHandler(this.textBox1_Click);
             // 
-            // button1
+            // textbSifre
             // 
-            this.button1.BackColor = System.Drawing.Color.Turquoise;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(175, 114);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 30);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Giriş";
-            this.button1.UseVisualStyleBackColor = false;
+            this.textbSifre.Location = new System.Drawing.Point(155, 73);
+            this.textbSifre.Name = "textbSifre";
+            this.textbSifre.Size = new System.Drawing.Size(128, 20);
+            this.textbSifre.TabIndex = 3;
+            this.textbSifre.Text = "Şifre";
+            this.textbSifre.Click += new System.EventHandler(this.textBox2_Click);
+            // 
+            // butonGiris
+            // 
+            this.butonGiris.BackColor = System.Drawing.Color.Turquoise;
+            this.butonGiris.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butonGiris.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.butonGiris.Location = new System.Drawing.Point(175, 114);
+            this.butonGiris.Name = "butonGiris";
+            this.butonGiris.Size = new System.Drawing.Size(85, 30);
+            this.butonGiris.TabIndex = 4;
+            this.butonGiris.Text = "Giriş";
+            this.butonGiris.UseVisualStyleBackColor = false;
+            this.butonGiris.Click += new System.EventHandler(this.butonGiris_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.LightSkyBlue;
             this.groupBox2.Controls.Add(this.pictureBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.textbKullaniciAdi);
+            this.groupBox2.Controls.Add(this.butonGiris);
+            this.groupBox2.Controls.Add(this.textbSifre);
             this.groupBox2.Location = new System.Drawing.Point(12, 105);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(313, 158);
@@ -118,16 +129,6 @@
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::SorunBildir.Properties.Resources.user;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(68, 49);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // GirisEkranı
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,10 +140,10 @@
             this.Text = "GirisEkranı";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -151,9 +152,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textbKullaniciAdi;
+        private System.Windows.Forms.TextBox textbSifre;
+        private System.Windows.Forms.Button butonGiris;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox pictureBox2;
