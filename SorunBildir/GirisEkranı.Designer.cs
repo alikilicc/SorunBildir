@@ -32,7 +32,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textbKullaniciAdi = new System.Windows.Forms.TextBox();
-            this.textbSifre = new System.Windows.Forms.TextBox();
             this.butonGiris = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -76,21 +75,15 @@
             // 
             // textbKullaniciAdi
             // 
-            this.textbKullaniciAdi.Location = new System.Drawing.Point(155, 31);
+            this.textbKullaniciAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textbKullaniciAdi.Location = new System.Drawing.Point(149, 46);
+            this.textbKullaniciAdi.Multiline = true;
             this.textbKullaniciAdi.Name = "textbKullaniciAdi";
-            this.textbKullaniciAdi.Size = new System.Drawing.Size(128, 20);
+            this.textbKullaniciAdi.Size = new System.Drawing.Size(134, 26);
             this.textbKullaniciAdi.TabIndex = 2;
-            this.textbKullaniciAdi.Text = "Kullanıcı Adı";
+            this.textbKullaniciAdi.Text = "İşletme Adını Girin";
+            this.textbKullaniciAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textbKullaniciAdi.Click += new System.EventHandler(this.textBox1_Click);
-            // 
-            // textbSifre
-            // 
-            this.textbSifre.Location = new System.Drawing.Point(155, 73);
-            this.textbSifre.Name = "textbSifre";
-            this.textbSifre.Size = new System.Drawing.Size(128, 20);
-            this.textbSifre.TabIndex = 3;
-            this.textbSifre.Text = "Şifre";
-            this.textbSifre.Click += new System.EventHandler(this.textBox2_Click);
             // 
             // butonGiris
             // 
@@ -111,7 +104,6 @@
             this.groupBox2.Controls.Add(this.pictureBox2);
             this.groupBox2.Controls.Add(this.textbKullaniciAdi);
             this.groupBox2.Controls.Add(this.butonGiris);
-            this.groupBox2.Controls.Add(this.textbSifre);
             this.groupBox2.Location = new System.Drawing.Point(12, 105);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(313, 158);
@@ -153,7 +145,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textbKullaniciAdi;
-        private System.Windows.Forms.TextBox textbSifre;
         private System.Windows.Forms.Button butonGiris;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox2;

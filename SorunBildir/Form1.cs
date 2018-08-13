@@ -102,7 +102,7 @@ namespace SorunBildir
 
         private void butonGonder_Click(object sender, EventArgs e)
         {
-            if (textbSoruNe.Text != string.Empty)
+            if (textbSoruNe.Text != string.Empty && textbBilAdi.Text != string.Empty)
             {
               
                 tut = GirisEkranı.otelAdi;
@@ -135,7 +135,7 @@ namespace SorunBildir
                 }
             }
             else
-                MessageBox.Show("Lütfen Sorunu Açıklayınız");
+                MessageBox.Show("Lütfen Sorun Ve Bilgiler Kısmını Doldurunuz");
         }
 
         private void button1_Click(object sender, EventArgs e)

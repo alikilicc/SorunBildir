@@ -126,6 +126,7 @@
             // 
             this.textbEtkiAlani.Location = new System.Drawing.Point(439, 119);
             this.textbEtkiAlani.Name = "textbEtkiAlani";
+            this.textbEtkiAlani.ReadOnly = true;
             this.textbEtkiAlani.Size = new System.Drawing.Size(100, 20);
             this.textbEtkiAlani.TabIndex = 11;
             // 
@@ -133,6 +134,7 @@
             // 
             this.textbMac.Location = new System.Drawing.Point(440, 73);
             this.textbMac.Name = "textbMac";
+            this.textbMac.ReadOnly = true;
             this.textbMac.Size = new System.Drawing.Size(100, 20);
             this.textbMac.TabIndex = 10;
             // 
@@ -140,6 +142,7 @@
             // 
             this.textbIP.Location = new System.Drawing.Point(439, 26);
             this.textbIP.Name = "textbIP";
+            this.textbIP.ReadOnly = true;
             this.textbIP.Size = new System.Drawing.Size(100, 20);
             this.textbIP.TabIndex = 9;
             // 
@@ -147,6 +150,7 @@
             // 
             this.textbGateway.Location = new System.Drawing.Point(162, 120);
             this.textbGateway.Name = "textbGateway";
+            this.textbGateway.ReadOnly = true;
             this.textbGateway.Size = new System.Drawing.Size(100, 20);
             this.textbGateway.TabIndex = 8;
             // 
@@ -154,6 +158,7 @@
             // 
             this.textbBilAdi.Location = new System.Drawing.Point(162, 74);
             this.textbBilAdi.Name = "textbBilAdi";
+            this.textbBilAdi.ReadOnly = true;
             this.textbBilAdi.Size = new System.Drawing.Size(100, 20);
             this.textbBilAdi.TabIndex = 7;
             // 
@@ -161,6 +166,7 @@
             // 
             this.textbKullAdi.Location = new System.Drawing.Point(162, 30);
             this.textbKullAdi.Name = "textbKullAdi";
+            this.textbKullAdi.ReadOnly = true;
             this.textbKullAdi.Size = new System.Drawing.Size(100, 20);
             this.textbKullAdi.TabIndex = 6;
             // 
